@@ -7,6 +7,7 @@ import {
     ScrollView,
     Dimensions
 } from "react-native";
+import { ScreenOrientation } from 'expo'
 import { Ionicons } from '@expo/vector-icons'
 
 import DefaultStyles from '../constants/default-styles';
@@ -16,6 +17,9 @@ import MainButton from '../components/MainButton';
 import BodyText from '../components/BodyText';
 
 const GameScreen = ({ userChoice, onGameOver }) => {
+
+    // ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
+
     const initialGuess = generateRandomBetween(1, 100, userChoice);
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
     const [pastGuesses, setPastGuesses] = useState([initialGuess.toString()]);

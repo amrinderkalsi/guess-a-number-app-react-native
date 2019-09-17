@@ -17,6 +17,7 @@ import Input from '../components/Input';
 import NumberContainer from '../components/NumberContainer';
 import DefaultStyle from '../constants/default-styles';
 import MainButton from '../components/MainButton';
+import AppButton from '../components/AppButton';
 
 class StartScreenScreen extends React.Component {
 
@@ -115,18 +116,16 @@ class StartScreenScreen extends React.Component {
                                 />
                                 <View style={styles.buttonContainer}>
                                     <View style={{width: this.state.buttonWidth}}>
-                                        <Button
-                                            title="Reset"
+                                        <AppButton
                                             onPress={this.resetInputHandler}
-                                            color={Colors.accent}
-                                        />
+                                            style={{backgroundColor: Colors.accent}}
+                                        >RESET </AppButton>
                                     </View>
                                     <View style={{width: this.state.buttonWidth}}>
-                                        <Button
-                                            title="Confirm"
+                                        <AppButton
                                             onPress={this.confirmInputHandler}
-                                            color={Colors.primary}
-                                        />
+                                            style={{backgroundColor: Colors.primary}}
+                                        >CONFIRM</AppButton>
                                     </View>
                                 </View>
                             </Card>

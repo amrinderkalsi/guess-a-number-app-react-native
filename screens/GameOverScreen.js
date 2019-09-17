@@ -78,7 +78,7 @@ const GameOverScreen = ({ noOfRounds, onRestart, number }) => {
             </BodyText>
           </View>
 
-          <MainButton onPress={onRestart}>NEW GAME</MainButton>
+          <MainButton style={styles.button} onPress={onRestart}>NEW GAME</MainButton>
         </View>
       </ScrollView>
     );
@@ -127,7 +127,7 @@ const GameOverScreen = ({ noOfRounds, onRestart, number }) => {
           </BodyText>
         </View>
 
-        <MainButton onPress={onRestart}>NEW GAME</MainButton>
+        <MainButton style={styles.button} onPress={onRestart}>NEW GAME</MainButton>
       </View>
     </ScrollView>
   );
@@ -157,6 +157,9 @@ const styles = StyleSheet.create({
   textHighlight: {
     color: Colors.primary,
     fontFamily: "open-sans-bold"
+  },
+  button: {
+      marginVertical: 10
   }
 });
 
